@@ -16,7 +16,7 @@ Marketing website for [Hallman Data Consulting](mailto:levi.m.hallman@gmail.com)
 
 - Vanilla HTML5, CSS3 (Grid/Flexbox), JavaScript
 - [Inter](https://fonts.google.com/specimen/Inter) via Google Fonts
-- Deployed via GitHub Pages (push to `main`)
+- Deployed via GitHub Pages (push to `main`) at [hallmandata.com](https://hallmandata.com) (custom domain via `CNAME`)
 
 ## Local development
 
@@ -28,5 +28,6 @@ Open `index.html` directly in a browser — no build step required.
 index.html    # Full site
 styles.css    # All styling
 main.js       # Mobile nav toggle
+CNAME         # Custom domain (hallmandata.com) for GitHub Pages
 CONTEXT.md    # Business goals, design guidelines, tone
 ```
