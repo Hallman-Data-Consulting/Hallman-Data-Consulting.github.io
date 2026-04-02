@@ -1,17 +1,32 @@
-# Client Template
+# Hallman Data Consulting — Company Website
 
-A reusable project template for data analytics client engagements.
+Marketing website for [Hallman Data Consulting](mailto:levi.m.hallman@gmail.com), a freelance data analytics consultancy serving small businesses. Built with plain HTML, CSS, and JavaScript. Hosted on GitHub Pages.
 
-## Setup
-1. Clone this repo
-2. Copy `.env.example` to `.env` and fill in credentials
-3. Install dependencies: `pip install -r requirements.txt`
-4. Update `docs/client-notes.md` with client context
+## What's on the site
 
-## Project Structure
-- `data/raw/` — original source data, never modified
-- `data/processed/` — cleaned and transformed data
-- `notebooks/` — exploration and analysis
-- `src/` — production scripts and pipelines
-- `dashboards/` — visualization apps
-- `docs/` — data dictionary and client notes
+- **Hero** — Value proposition for small business owners with scattered data
+- **Pain Points** — Common data problems (churn, profitability, data sprawl)
+- **Services** — Data collection/cleanup, predictive modeling, analytics dashboards
+- **How It Works** — 3-step engagement process
+- **Example Work** — Ironforge Fitness demo (synthetic gym client with live dashboard)
+- **About** — Levi Hallman bio
+- **Contact** — Email CTA
+
+## Stack
+
+- Vanilla HTML5, CSS3 (Grid/Flexbox), JavaScript
+- [Inter](https://fonts.google.com/specimen/Inter) via Google Fonts
+- Deployed via GitHub Pages (push to `main`)
+
+## Local development
+
+Open `index.html` directly in a browser — no build step required.
+
+## Files
+
+```
+index.html    # Full site
+styles.css    # All styling
+main.js       # Mobile nav toggle
+CONTEXT.md    # Business goals, design guidelines, tone
+```
