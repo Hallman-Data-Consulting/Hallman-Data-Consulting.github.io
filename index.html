@@ -3,15 +3,15 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Hallman Data Consulting helps small businesses collect, model, and visualize their data so they can make better decisions every day." />
+  <meta name="description" content="Hallman Data Consulting helps small businesses turn their data into clear, actionable insights through custom data solutions built around the questions that actually matter to your business." />
   <meta property="og:title" content="Hallman Data Consulting" />
-  <meta property="og:description" content="Custom dashboards and data insights for small businesses. Plain language. Real results." />
+  <meta property="og:description" content="Hallman Data Consulting helps small businesses turn their data into clear, actionable insights through custom data solutions built around the questions that actually matter to your business." />
   <meta property="og:type" content="website" />
   <title>Hallman Data Consulting</title>
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
 </head>
 <body>
 
@@ -20,12 +20,21 @@
   ========================= -->
   <header class="nav-header">
     <nav class="nav-inner container">
-      <a href="#" class="nav-logo">Hallman Data Consulting</a>
+      <a href="#" class="nav-logo">
+        <span class="logo-monogram">HDC</span>
+        <span class="logo-divider"></span>
+        <span class="logo-text">
+          <span class="logo-name">Hallman Data Consulting</span>
+          <span class="logo-descriptor">Analytics &amp; Strategy</span>
+        </span>
+      </a>
       <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="products.html">Products</a></li>
+        <li><a href="#demo">Products</a></li>
+        <li><a href="#what-we-do">What We Do</a></li>
+        <li><a href="#about">About</a></li>
         <li><a href="#contact" class="nav-cta">Get in Touch</a></li>
       </ul>
     </nav>
@@ -39,13 +48,12 @@
     <section class="hero">
       <div class="container hero-inner">
         <div class="hero-text">
-          <p class="hero-eyebrow">End-to-End Data Solutions for Small Business</p>
-          <h1>Stop guessing.<br />Start knowing.</h1>
+          <p class="hero-eyebrow">Bridging the gap between your data and data-driven decisions</p>
+          <h1>Turn your data into clear, actionable insights.</h1>
           <p class="hero-sub">
-            You already have the data. It lives in your POS system, your spreadsheets, your booking software.
-            We collect it, clean it, build models that answer your hardest questions, and deliver a live dashboard so you can see the answers every day.
+            Most small businesses are sitting on more data than they realize. The problem isn't a lack of data, it's that turning it into something genuinely useful takes time, money, and expertise. That's exactly where Hallman Data Consulting fits.
           </p>
-          <a href="#contact" class="btn btn-primary">Book a Free Call</a>
+          <a href="#contact" class="btn btn-primary">Get in Touch</a>
         </div>
         <div class="hero-visual" aria-hidden="true">
           <div class="hero-card">
@@ -66,22 +74,107 @@
     ========================= -->
     <section class="pain-points">
       <div class="container">
-        <p class="section-label">Sound familiar?</p>
+        <p class="section-label">The Problem</p>
         <div class="pain-grid">
           <div class="pain-card">
-            <span class="pain-icon">&#x1F4C9;</span>
-            <p>"I don't know which customers are about to stop coming back."</p>
+            <p>Hiring a full-time data scientist is too expensive.</p>
           </div>
           <div class="pain-card">
-            <span class="pain-icon">&#x1F914;</span>
-            <p>"I can't tell which products or services are actually making me money."</p>
+            <p>Paying a large analytics firm gives you a generic dashboard that wasn't built with your business in mind.</p>
           </div>
           <div class="pain-card">
-            <span class="pain-icon">&#x1F4CA;</span>
-            <p>"I have data in spreadsheets but no idea what to do with it."</p>
+            <p>There's a gap between what small businesses need and what's actually available to them.</p>
           </div>
         </div>
-        <p class="pain-footer">That's exactly what we solve.</p>
+        <p class="pain-footer">That's exactly where Hallman Data Consulting fits.</p>
+      </div>
+    </section>
+
+    <!-- ========================
+         CORE PRODUCTS
+    ========================= -->
+    <section class="demo" id="demo">
+      <div class="container">
+        <p class="section-label">Core Products</p>
+        <h2>Data products built for small business.</h2>
+
+        <div class="demo-grid">
+        <div class="demo-card">
+          <div class="demo-preview">
+            <img src="assets/ironforgedashscreenshot.png" alt="Ironforge Fitness Member Analytics dashboard screenshot" />
+          </div>
+          <div class="demo-details">
+            <h3>Custom Analytics Dashboard</h3>
+            <p>A fully custom dashboard built around your business. We connect to your data, clean it up, build models that answer your real questions, and deliver a live dashboard you can check any day.</p>
+            <ul class="demo-features">
+              <li>Revenue trends and sales analytics</li>
+              <li>Customer demographics and consumer clustering</li>
+              <li>Predictive modeling and profitability simulations</li>
+              <li>Individual customer lookup tool</li>
+            </ul>
+            <a href="https://ironforge.hallmandata.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Live Demo</a>
+          </div>
+        </div>
+
+        <div class="demo-card">
+          <div class="demo-preview demo-preview-sentiment">
+            <div class="sentiment-preview">
+              <div class="sentiment-bar-group">
+                <span class="sentiment-bar-label">Service</span>
+                <div class="sentiment-bar-track">
+                  <div class="sentiment-bar-fill" style="--w: 72%; --color: #2ecc71"></div>
+                </div>
+                <span class="sentiment-bar-pct">72%</span>
+              </div>
+              <div class="sentiment-bar-group">
+                <span class="sentiment-bar-label">Staff</span>
+                <div class="sentiment-bar-track">
+                  <div class="sentiment-bar-fill" style="--w: 88%; --color: #2ecc71"></div>
+                </div>
+                <span class="sentiment-bar-pct">88%</span>
+              </div>
+              <div class="sentiment-bar-group">
+                <span class="sentiment-bar-label">Wait Time</span>
+                <div class="sentiment-bar-track">
+                  <div class="sentiment-bar-fill" style="--w: 34%; --color: #e74c3c"></div>
+                </div>
+                <span class="sentiment-bar-pct">34%</span>
+              </div>
+              <div class="sentiment-bar-group">
+                <span class="sentiment-bar-label">Value</span>
+                <div class="sentiment-bar-track">
+                  <div class="sentiment-bar-fill" style="--w: 61%; --color: #f39c12"></div>
+                </div>
+                <span class="sentiment-bar-pct">61%</span>
+              </div>
+              <div class="sentiment-bar-group">
+                <span class="sentiment-bar-label">Cleanliness</span>
+                <div class="sentiment-bar-track">
+                  <div class="sentiment-bar-fill" style="--w: 79%; --color: #2ecc71"></div>
+                </div>
+                <span class="sentiment-bar-pct">79%</span>
+              </div>
+              <div class="sentiment-indicator-row">
+                <span class="sentiment-chip positive">staff very friendly</span>
+                <span class="sentiment-chip negative">long wait time</span>
+                <span class="sentiment-chip positive">always fresh</span>
+              </div>
+            </div>
+          </div>
+          <div class="demo-details">
+            <h3>Business Sentiment Intelligence</h3>
+            <p>Your customers are already telling you what they think, in Google reviews. This product listens to all of it and tells you exactly what's driving your ratings: not just "positive" or "negative," but whether it's your wait times, your staff, your cleanliness, or your value.</p>
+            <ul class="demo-features">
+              <li>Pulls and monitors Google Maps reviews automatically</li>
+              <li>Identifies specific indicators: "long wait time," "rude staff," "always fresh"</li>
+              <li>Groups feedback into categories: Service, Staff, Quality, Value, and more</li>
+              <li>See how you compare to competitors in your category</li>
+            </ul>
+            <a href="https://fortwayne.hallmandata.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Live Demo</a>
+          </div>
+        </div>
+        </div><!-- /.demo-grid -->
+
       </div>
     </section>
 
@@ -91,60 +184,19 @@
     <section class="what-we-do" id="what-we-do">
       <div class="container">
         <p class="section-label">What We Do</p>
-        <h2>The full picture, from raw data to clear answers.</h2>
-        <p class="section-intro">Most businesses have data scattered across systems they never fully use. We handle the entire process: getting that data organized, building models that answer real business questions, and putting the results in front of you in a way that's easy to act on.</p>
-        <div class="service-grid">
-          <div class="service-card">
-            <div class="service-icon">&#x1F5C4;&#xFE0F;</div>
-            <h3>Data Collection and Cleanup</h3>
-            <p>We connect to wherever your data already lives, pull it together, and clean it up. Messy spreadsheets, exports from different tools, missing values — we handle all of it before any analysis begins.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">&#x1F52E;</div>
-            <h3>Predictive Modeling</h3>
-            <p>We build models that answer forward-looking questions: which customers are likely to leave, what your revenue might look like next quarter, which products are underperforming. Real predictions, explained in plain language.</p>
-          </div>
-          <div class="service-card">
-            <div class="service-icon">&#x1F4CA;</div>
-            <h3>Analytics Dashboard</h3>
-            <p>Everything gets surfaced in a live, interactive dashboard built around your business. Log in and see your numbers, your trends, and your model outputs updated and ready to act on.</p>
-          </div>
-        </div>
-        <div class="retainer-callout">
-          <p>
-            <strong>How the retainer works:</strong> You pay a flat monthly fee. We handle all the data work. No surprise invoices, no hourly billing. If your needs grow, we talk and adjust together.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================
-         DEMO
-    ========================= -->
-    <section class="demo" id="demo">
-      <div class="container">
-        <p class="section-label">Example Work</p>
-        <h2>Here's what your deliverable looks like.</h2>
-        <p class="demo-intro">
-          We built this end-to-end project for a fictional gym client as a working example of what a real engagement produces. It's live and you can click through it yourself.
-        </p>
-        <div class="demo-card">
-          <div class="demo-preview">
-            <img src="assets/ironforgedashscreenshot.png" alt="Ironforge Fitness Member Analytics dashboard screenshot" />
-          </div>
-          <div class="demo-details">
-            <h3>Ironforge Fitness: Member Analytics</h3>
-            <p>A complete data project for a gym: synthetic member data collected and cleaned, predictive models built to identify at-risk members and segment the customer base, and a live dashboard delivering all of it in one place.</p>
-            <ul class="demo-features">
-              <li>Data pipeline from raw records to clean dataset</li>
-              <li>Churn risk model with member-level predictions</li>
-              <li>Member segmentation by engagement level</li>
-              <li>Monthly revenue trends and class analytics</li>
-              <li>Individual member lookup tool</li>
-            </ul>
-            <a href="https://ironforge.hallmandata.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Live Dashboard &#x2197;</a>
-          </div>
-        </div>
+        <h2>Custom analytics built for the specific questions your business is asking.</h2>
+        <p class="section-intro">We design and maintain custom analytics dashboards and data pipelines tailored to each client. We work side by side with each client to understand the specific questions they're trying to answer, then build the analytics around those questions. Not a templated solution, but a genuine one.</p>
+        <p class="section-intro">Depending on your business, that might include:</p>
+        <ul class="service-list">
+          <li>Revenue trends and sales analytics</li>
+          <li>Product and program profitability analysis</li>
+          <li>Staffing and operational insights</li>
+          <li>Customer demographics and consumer clustering</li>
+          <li>Customer sentiment analysis</li>
+          <li>Predictive modeling and profitability simulations</li>
+          <li>New data collection setup, for businesses that aren't yet tracking what they need to</li>
+        </ul>
+        <p class="pain-footer">If you're asking a question about your business and you think the answer might be hiding in your data, that's a conversation worth having.</p>
       </div>
     </section>
 
@@ -160,30 +212,19 @@
             I'm Levi Hallman, based in Indianapolis. I'm completing a master's degree in data science and have spent the last several years working with data across analytics, modeling, and automation.
           </p>
           <p>
-            I started Hallman Data Consulting because most small businesses don't have a data team, and they shouldn't need to hire one full-time. A solid data setup and a monthly check-in is often all it takes to make genuinely better decisions.
+            Hallman Data Consulting exists to give small businesses access to real, actionable insights by gathering, analyzing, and presenting their data in a way that drives confident, informed decision-making.
           </p>
           <p>
-            I handle everything: pulling your data, building the models and visualizations, and keeping it updated. You stay focused on running your business.
+            I work side by side with each client to understand the specific questions they're trying to answer, then build the analytics around those questions. Not a templated solution, but a genuine one.
           </p>
         </div>
         <div class="about-credentials">
           <img src="assets/headshot.jpeg" alt="Levi Hallman" class="about-photo" />
-          <div class="credential">
-            <span class="credential-icon">&#x1F393;</span>
-            <span>M.S. Data Science (in progress)</span>
-          </div>
-          <div class="credential">
-            <span class="credential-icon">&#x2601;&#xFE0F;</span>
-            <span>AWS cloud infrastructure</span>
-          </div>
-          <div class="credential">
-            <span class="credential-icon">&#x1F4C8;</span>
-            <span>Dashboards, models, and data pipelines</span>
-          </div>
-          <div class="credential">
-            <span class="credential-icon">&#x1F4CD;</span>
-            <span>Indianapolis, IN</span>
-          </div>
+          <div class="credential">Data Scientist</div>
+          <div class="credential">B.S. in Data Science</div>
+          <div class="credential">M.S. in Data Science (in progress)</div>
+          <div class="credential">Indianapolis, IN</div>
+          <div class="credential">Freelance / Independent</div>
         </div>
       </div>
     </section>
@@ -194,9 +235,9 @@
     <section class="contact" id="contact">
       <div class="container contact-inner">
         <p class="section-label">Get in Touch</p>
-        <h2>Let's talk about your data.</h2>
+        <h2>That's a conversation worth having.</h2>
         <p class="contact-sub">
-          Not sure if this is a fit? Send an email and we'll figure it out together. No pitch, no pressure.
+          If you're asking a question about your business and you think the answer might be hiding in your data, reach out.
         </p>
         <a href="mailto:levi.m.hallman@gmail.com" class="btn btn-primary btn-large">levi.m.hallman@gmail.com</a>
         <p class="contact-note">I typically respond within one business day.</p>
@@ -210,7 +251,7 @@
   ========================= -->
   <footer class="footer">
     <div class="container footer-inner">
-      <p class="footer-logo">Hallman Data Consulting</p>
+      <p class="footer-logo"><span class="footer-logo-monogram">HDC</span> Hallman Data Consulting</p>
       <p class="footer-copy">&copy; 2026 Hallman Data Consulting. Indianapolis, IN.</p>
     </div>
   </footer>
