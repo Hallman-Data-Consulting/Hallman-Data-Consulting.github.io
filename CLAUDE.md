@@ -42,7 +42,19 @@ hallmandata.com (DNS → GitHub Pages)
 monitor.hallmandata.com (tracks all traffic including this site)
 ```
 
-**To deploy:** Push changes here, then sync the content to the `.github.io` repo. The site is not auto-deployed from this repo directly — the `.github.io` repo is the actual GitHub Pages host.
+**To deploy:** commit and push `main` from this repo. That is the whole deploy.
+
+There is no second repo to sync to. `~/Code/Hallman-Data-Consulting.github.io` is a
+*second local clone of this same GitHub repo*, not a separate host — check
+`git remote -v` in both if that ever looks doubtful. It goes stale because
+nothing pulls it; `git pull` it after a deploy or ignore it.
+
+**Bump the `?v=` on `styles.css` and `main.js` in both HTML files with every
+deploy.** Cloudflare serves the HTML uncached but caches CSS and JS for four
+hours, so without a new version string a deploy ships new markup against the
+previous release's stylesheet and script — which silently breaks anything
+depending on new CSS classes or new JS, for up to four hours, with no error
+anywhere. This has happened once already.
 
 ---
 
