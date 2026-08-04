@@ -214,7 +214,45 @@ ul {
 .hero {
   background: linear-gradient(135deg, #1b2a4a 0%, #111e38 60%, #0c1525 100%);
   color: #ffffff;
-  padding: 100px 0 80px;
+  /* Extra room at the bottom so the skyline reads as a band under the content
+     rather than a texture behind it. */
+  padding: 100px 0 190px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Fort Wayne skyline, hand-drawn rather than photographed so it scales to any
+   width and carries no licensing. `currentColor` drives the whole silhouette,
+   so the opacity below is the only dial worth touching. */
+.hero-skyline {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  line-height: 0;
+  pointer-events: none;
+  color: #f9f7f3;
+  opacity: 0.13;
+}
+
+.hero-skyline img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* .btn-primary is navy on cream, which all but disappears against a hero
+   gradient that starts at the same navy. Gold is the one brand colour that
+   holds up on both backgrounds, so the page's main call to action reads as a
+   button rather than a dark patch. */
+.hero .btn-primary {
+  background: #c4972a;
+  color: #1b2a4a;
+}
+
+.hero .btn-primary:hover {
+  background: #d4a73a;
+  transform: translateY(-1px);
 }
 
 .hero-inner {
@@ -222,6 +260,9 @@ ul {
   grid-template-columns: 1fr 1fr;
   align-items: center;
   gap: 60px;
+  /* Above the skyline. */
+  position: relative;
+  z-index: 1;
 }
 
 .hero-eyebrow {
@@ -509,6 +550,10 @@ ul {
   display: flex;
   align-items: center;
   justify-content: center;
+  /* Matches the 1440x900 screenshots, so all four cards in the grid line up
+     whether their preview is a screenshot or the drawn sentiment graphic. */
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
 }
 
 .demo-grid {
@@ -524,7 +569,135 @@ ul {
 
 .demo-preview-sentiment {
   background: #1b2a4a;
-  padding: 32px 28px;
+  padding: 24px 28px;
+}
+
+.demo-preview-sentiment .sentiment-preview {
+  width: 100%;
+  gap: 12px;
+}
+
+/* Screenshots are captured at 1440x900; the fixed ratio keeps the grid from
+   reflowing while they load. */
+.demo-preview img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top left;
+}
+
+.demo-footer {
+  margin-top: 32px;
+  text-align: center;
+}
+
+.demo-footer-link {
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #1b2a4a;
+  border-bottom: 1px solid #c4972a;
+  padding-bottom: 2px;
+}
+
+.demo-footer-link:hover {
+  color: #c4972a;
+}
+
+/* ---------- SCREENSHOT TABS ---------- */
+
+.shot-tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.shot-tablist {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.shot-tablist button {
+  font-family: inherit;
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #6b6a65;
+  background: transparent;
+  border: 1px solid #e0ddd6;
+  border-radius: 999px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: color 0.15s, border-color 0.15s, background 0.15s;
+}
+
+.shot-tablist button:hover {
+  color: #1b2a4a;
+  border-color: #c4972a;
+}
+
+.shot-tablist button[aria-selected='true'] {
+  color: #ffffff;
+  background: #1b2a4a;
+  border-color: #1b2a4a;
+}
+
+.shot-tablist button:focus-visible {
+  outline: 2px solid #c4972a;
+  outline-offset: 2px;
+}
+
+.shot-panel {
+  border: 1px solid #e0ddd6;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 40px rgba(27, 42, 74, 0.08);
+  background: #f9f7f3;
+}
+
+.shot-panel[hidden] {
+  display: none;
+}
+
+.shot-panel img {
+  width: 100%;
+  height: auto;
+  display: block;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  object-position: top left;
+}
+
+/* ---------- PRODUCT ACCESS NOTE ---------- */
+
+.product-access {
+  margin-top: 14px;
+  font-size: 0.8rem;
+  color: #6b6a65;
+  padding-left: 14px;
+  position: relative;
+}
+
+.product-access::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #6b6a65;
+}
+
+/* Both states mean "you can get in right now". Green is straight through,
+   gold is one Google click away — neither should read as a locked door. */
+.product-access-open::before {
+  background: #2e8b57;
+}
+
+.product-access-signin::before {
+  background: #c4972a;
 }
 
 .demo-placeholder {
@@ -574,12 +747,17 @@ ul {
   position: relative;
 }
 
+/* Drawn rather than typed: a glyph bullet renders differently on every
+   platform and shows up as an emoji on some of them. */
 .demo-features li::before {
-  content: '✓';
+  content: '';
   position: absolute;
   left: 0;
-  color: #c4972a;
-  font-weight: 700;
+  top: 0.62em;
+  width: 7px;
+  height: 7px;
+  background: #c4972a;
+  transform: rotate(45deg);
 }
 
 /* ---------- ABOUT ---------- */
@@ -760,6 +938,12 @@ ul {
 
 .product-card-reverse > * {
   direction: ltr;
+}
+
+/* Holds either a .shot-tabs gallery or a single .product-visual, so the grid
+   column behaves the same either way. */
+.product-visual-col {
+  min-width: 0;
 }
 
 .product-visual {
@@ -1006,7 +1190,18 @@ ul {
   }
 
   .hero {
-    padding: 64px 0 56px;
+    /* The SVG is 1440x280, so on a narrow screen it renders far shorter and
+       needs correspondingly less clearance beneath the copy. */
+    padding: 64px 0 110px;
+  }
+
+  /* At phone widths a full-width skyline is only ~75px tall and reads as a
+     smudge. Overflowing the viewport and centring on the tallest towers keeps
+     the landmarks legible; .hero already clips the excess. */
+  .hero-skyline img {
+    width: 200%;
+    max-width: none;
+    margin-left: -52%;
   }
 
   .what-we-do,

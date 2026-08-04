@@ -1,0 +1,92 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 280" width="1440" height="280"
+     role="img" aria-labelledby="fw-title" preserveAspectRatio="xMidYMax slice">
+  <title id="fw-title">Silhouette of the Fort Wayne, Indiana skyline</title>
+
+  <!--
+    Hand-drawn silhouette, not a photograph — no licensing to worry about and
+    it holds up at any width. Landmarks left to right: the Cathedral of the
+    Immaculate Conception's twin spires, the Allen County Courthouse dome,
+    Lincoln Bank Tower with its Art Deco setbacks, the Indiana Michigan Power
+    Center slab, Ash Skyline Plaza, and Parkview Field's light towers, over a
+    suggestion of the three rivers and the Wells Street Bridge.
+
+    `currentColor` on both layers means one CSS colour drives the whole thing.
+  -->
+
+  <!-- ── Far layer: low massing, held back so the towers read forward ── -->
+  <g fill="currentColor" opacity="0.34">
+    <rect x="0"    y="212" width="120" height="68"/>
+    <rect x="112"  y="196" width="76"  height="84"/>
+    <rect x="182"  y="222" width="94"  height="58"/>
+    <rect x="366"  y="204" width="70"  height="76"/>
+    <rect x="596"  y="188" width="58"  height="92"/>
+    <rect x="700"  y="206" width="82"  height="74"/>
+    <rect x="905"  y="196" width="66"  height="84"/>
+    <rect x="1046" y="214" width="88"  height="66"/>
+    <rect x="1224" y="200" width="72"  height="80"/>
+    <rect x="1330" y="218" width="110" height="62"/>
+    <!-- smokestacks, the old industrial river frontage -->
+    <rect x="60"   y="164" width="9"   height="52"/>
+    <rect x="1290" y="170" width="8"   height="46"/>
+  </g>
+
+  <!-- ── Near layer ── -->
+  <g fill="currentColor">
+
+    <!-- Cathedral of the Immaculate Conception: twin spires -->
+    <rect x="238" y="196" width="86" height="84"/>
+    <rect x="248" y="150" width="20" height="52"/>
+    <polygon points="258,112 250,152 266,152"/>
+    <rect x="294" y="150" width="20" height="52"/>
+    <polygon points="304,112 296,152 312,152"/>
+    <rect x="274" y="176" width="14" height="26"/>
+
+    <!-- Allen County Courthouse: drum, dome and lantern -->
+    <rect x="424" y="206" width="152" height="74"/>
+    <rect x="446" y="186" width="108" height="22"/>
+    <rect x="474" y="166" width="52"  height="22"/>
+    <path d="M474 168 q26 -40 52 0 z"/>
+    <rect x="494" y="132" width="12"  height="18"/>
+    <path d="M494 134 q6 -14 12 0 z"/>
+    <rect x="498" y="116" width="4"   height="16"/>
+    <circle cx="500" cy="112" r="5"/>
+
+    <!-- Lincoln Bank Tower: Art Deco setbacks stepping to a narrow crown -->
+    <rect x="640" y="176" width="104" height="104"/>
+    <rect x="654" y="126" width="76"  height="52"/>
+    <rect x="668" y="86"  width="48"  height="42"/>
+    <rect x="680" y="58"  width="24"  height="30"/>
+    <polygon points="692,34 682,60 702,60"/>
+    <rect x="690" y="18"  width="4"   height="18"/>
+
+    <!-- Indiana Michigan Power Center: the tall modern slab -->
+    <rect x="790" y="64" width="96" height="216"/>
+    <rect x="806" y="50" width="64" height="16"/>
+
+    <!-- Ash Skyline Plaza -->
+    <rect x="988" y="140" width="82" height="140"/>
+    <rect x="1002" y="126" width="54" height="16"/>
+
+    <!-- A mid-rise pair to fill the right shoulder -->
+    <rect x="1108" y="168" width="70" height="112"/>
+    <rect x="1152" y="146" width="56" height="134"/>
+
+    <!-- Parkview Field: light towers over the ballpark -->
+    <rect x="1252" y="228" width="130" height="52"/>
+    <rect x="1276" y="150" width="7"  height="80"/>
+    <rect x="1262" y="132" width="35" height="22" rx="2"/>
+    <rect x="1350" y="158" width="7"  height="72"/>
+    <rect x="1336" y="140" width="35" height="22" rx="2"/>
+
+    <!-- Wells Street Bridge, spanning the near bank -->
+    <path d="M96 280 v-30 h8 v30 z"/>
+    <path d="M96 252 q54 -46 108 0 v6 q-54 -40 -108 0 z"/>
+    <path d="M196 280 v-30 h8 v30 z"/>
+  </g>
+
+  <!-- ── The rivers, drawn as thin bands rather than a solid mass ── -->
+  <g fill="currentColor" opacity="0.20">
+    <rect x="0" y="268" width="1440" height="4"/>
+    <rect x="0" y="276" width="1440" height="2"/>
+  </g>
+</svg>

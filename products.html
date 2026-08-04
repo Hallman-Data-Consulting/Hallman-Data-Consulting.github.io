@@ -3,11 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Hallman Data Consulting products: custom analytics dashboards and business sentiment intelligence for small businesses." />
+  <meta name="description" content="Hallman Data Consulting products: custom analytics dashboards, business sentiment intelligence, retail analytics, and a free business decision simulator for small businesses." />
   <meta property="og:title" content="Products | Hallman Data Consulting" />
-  <meta property="og:description" content="Live data products for small businesses. Custom dashboards and sentiment intelligence." />
+  <meta property="og:description" content="Live data products for small businesses. Custom dashboards, sentiment intelligence, retail analytics, and free decision tools." />
   <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://hallmandata.com/assets/screens/vantage-dashboard.png" />
   <title>Products | Hallman Data Consulting</title>
+  <link rel="icon" type="image/png" href="assets/hdc-mark.png" />
+  <link rel="apple-touch-icon" href="assets/hdc-mark.png" />
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -49,7 +52,8 @@
         <h1>Data tools built for small business.</h1>
         <p class="page-hero-sub">
           Each product starts as a working demo and becomes a custom deployment for your business or market.
-          Live data, real insights, no technical knowledge required.
+          Live data, real insights, no technical knowledge required. All four are live and open to anyone —
+          two open straight away, two after a one-click Google sign-in.
         </p>
       </div>
     </section>
@@ -60,8 +64,27 @@
     <section class="product-section" id="analytics-dashboard">
       <div class="container">
         <div class="product-card">
-          <div class="product-visual">
-            <img src="assets/ironforgedashscreenshot.png" alt="Ironforge Fitness Member Analytics dashboard screenshot" />
+          <div class="product-visual-col">
+            <div class="shot-tabs" data-shot-tabs>
+              <div class="shot-tablist" role="tablist" aria-label="Member analytics dashboard screens">
+                <button type="button" role="tab" id="if-t1" aria-controls="if-p1" aria-selected="true">Overview</button>
+                <button type="button" role="tab" id="if-t2" aria-controls="if-p2" aria-selected="false" tabindex="-1">Segments</button>
+                <button type="button" role="tab" id="if-t3" aria-controls="if-p3" aria-selected="false" tabindex="-1">Revenue</button>
+                <button type="button" role="tab" id="if-t4" aria-controls="if-p4" aria-selected="false" tabindex="-1">Classes</button>
+              </div>
+              <div class="shot-panel" role="tabpanel" id="if-p1" aria-labelledby="if-t1">
+                <img src="assets/screens/ironforge-overview.png" width="1440" height="900" alt="Member analytics overview: total members, active members, revenue, and membership breakdown charts" />
+              </div>
+              <div class="shot-panel" role="tabpanel" id="if-p2" aria-labelledby="if-t2" hidden>
+                <img src="assets/screens/ironforge-segments.png" width="1440" height="900" loading="lazy" alt="Members grouped into High Value, Loyal, At Risk, and Inactive groups with supporting charts" />
+              </div>
+              <div class="shot-panel" role="tabpanel" id="if-p3" aria-labelledby="if-t3" hidden>
+                <img src="assets/screens/ironforge-revenue.png" width="1440" height="900" loading="lazy" alt="Revenue trends over time for the member analytics dashboard" />
+              </div>
+              <div class="shot-panel" role="tabpanel" id="if-p4" aria-labelledby="if-t4" hidden>
+                <img src="assets/screens/ironforge-classes.png" width="1440" height="900" loading="lazy" alt="Class attendance and performance analytics" />
+              </div>
+            </div>
           </div>
           <div class="product-details">
             <p class="product-tag">Custom Engagement</p>
@@ -70,19 +93,20 @@
               A fully custom dashboard built around your business. We connect to your data, clean it up, build models that answer your real questions, and deliver a live dashboard you can check any day.
             </p>
             <p>
-              The Ironforge Fitness demo shows exactly what this looks like end-to-end: member segmentation, churn risk identification, revenue trends, and individual customer lookup. All built on real data pipelines and updated monthly.
+              The Ironforge Fitness demo shows exactly what this looks like end-to-end: member groups, at-risk members, revenue trends, and individual customer lookup. All built on real data and updated monthly.
             </p>
             <ul class="demo-features">
               <li>Connects to your existing data: POS, spreadsheets, booking software</li>
-              <li>Predictive models for churn risk and revenue forecasting</li>
-              <li>Customer segmentation to identify your best and at-risk members</li>
+              <li>Flags the customers most likely to leave, before they do</li>
+              <li>Groups your customers so you can see your best and at-risk members</li>
               <li>Live dashboard updated on a regular cadence</li>
               <li>Flat monthly retainer. No hourly billing, no surprises.</li>
             </ul>
             <div class="product-actions">
-              <a href="https://ironforge.hallmandata.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Live Demo &#x2197;</a>
+              <a href="https://ironforge.hallmandata.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Open Live Demo</a>
               <a href="index.html#contact" class="btn btn-secondary">Get a Quote</a>
             </div>
+            <p class="product-access product-access-signin">Open to anyone — sign in with any Google account and you're straight in. Nothing to request, no approval to wait for.</p>
           </div>
         </div>
       </div>
@@ -94,47 +118,49 @@
     <section class="product-section product-section-alt" id="sentiment-intelligence">
       <div class="container">
         <div class="product-card product-card-reverse">
-          <div class="product-visual product-visual-sentiment">
-            <div class="sentiment-preview">
-              <div class="sentiment-bar-group">
-                <span class="sentiment-bar-label">Service</span>
-                <div class="sentiment-bar-track">
-                  <div class="sentiment-bar-fill" style="--w: 72%; --color: #2ecc71"></div>
+          <div class="product-visual-col">
+            <div class="product-visual product-visual-sentiment">
+              <div class="sentiment-preview">
+                <div class="sentiment-bar-group">
+                  <span class="sentiment-bar-label">Service</span>
+                  <div class="sentiment-bar-track">
+                    <div class="sentiment-bar-fill" style="--w: 72%; --color: #2ecc71"></div>
+                  </div>
+                  <span class="sentiment-bar-pct">72%</span>
                 </div>
-                <span class="sentiment-bar-pct">72%</span>
-              </div>
-              <div class="sentiment-bar-group">
-                <span class="sentiment-bar-label">Staff</span>
-                <div class="sentiment-bar-track">
-                  <div class="sentiment-bar-fill" style="--w: 88%; --color: #2ecc71"></div>
+                <div class="sentiment-bar-group">
+                  <span class="sentiment-bar-label">Staff</span>
+                  <div class="sentiment-bar-track">
+                    <div class="sentiment-bar-fill" style="--w: 88%; --color: #2ecc71"></div>
+                  </div>
+                  <span class="sentiment-bar-pct">88%</span>
                 </div>
-                <span class="sentiment-bar-pct">88%</span>
-              </div>
-              <div class="sentiment-bar-group">
-                <span class="sentiment-bar-label">Wait Time</span>
-                <div class="sentiment-bar-track">
-                  <div class="sentiment-bar-fill" style="--w: 34%; --color: #e74c3c"></div>
+                <div class="sentiment-bar-group">
+                  <span class="sentiment-bar-label">Wait Time</span>
+                  <div class="sentiment-bar-track">
+                    <div class="sentiment-bar-fill" style="--w: 34%; --color: #e74c3c"></div>
+                  </div>
+                  <span class="sentiment-bar-pct">34%</span>
                 </div>
-                <span class="sentiment-bar-pct">34%</span>
-              </div>
-              <div class="sentiment-bar-group">
-                <span class="sentiment-bar-label">Value</span>
-                <div class="sentiment-bar-track">
-                  <div class="sentiment-bar-fill" style="--w: 61%; --color: #f39c12"></div>
+                <div class="sentiment-bar-group">
+                  <span class="sentiment-bar-label">Value</span>
+                  <div class="sentiment-bar-track">
+                    <div class="sentiment-bar-fill" style="--w: 61%; --color: #f39c12"></div>
+                  </div>
+                  <span class="sentiment-bar-pct">61%</span>
                 </div>
-                <span class="sentiment-bar-pct">61%</span>
-              </div>
-              <div class="sentiment-bar-group">
-                <span class="sentiment-bar-label">Cleanliness</span>
-                <div class="sentiment-bar-track">
-                  <div class="sentiment-bar-fill" style="--w: 79%; --color: #2ecc71"></div>
+                <div class="sentiment-bar-group">
+                  <span class="sentiment-bar-label">Cleanliness</span>
+                  <div class="sentiment-bar-track">
+                    <div class="sentiment-bar-fill" style="--w: 79%; --color: #2ecc71"></div>
+                  </div>
+                  <span class="sentiment-bar-pct">79%</span>
                 </div>
-                <span class="sentiment-bar-pct">79%</span>
-              </div>
-              <div class="sentiment-indicator-row">
-                <span class="sentiment-chip positive">staff very friendly</span>
-                <span class="sentiment-chip negative">long wait time</span>
-                <span class="sentiment-chip positive">always fresh</span>
+                <div class="sentiment-indicator-row">
+                  <span class="sentiment-chip positive">staff very friendly</span>
+                  <span class="sentiment-chip negative">long wait time</span>
+                  <span class="sentiment-chip positive">always fresh</span>
+                </div>
               </div>
             </div>
           </div>
@@ -142,22 +168,127 @@
             <p class="product-tag">SaaS Product</p>
             <h2>Business Sentiment Intelligence</h2>
             <p>
-              Your customers are already telling you what they think, in Google reviews. This product listens to all of it, runs it through AI analysis, and tells you exactly what's driving your ratings: not just "positive" or "negative," but whether it's your wait times, your staff, your cleanliness, or your value.
+              Your customers are already telling you what they think, in Google reviews. This product listens to all of it, reads every review, and tells you exactly what's driving your ratings: not just "positive" or "negative," but whether it's your wait times, your staff, your cleanliness, or your value.
             </p>
             <p>
               The Fort Wayne demo tracks dozens of local businesses across restaurants, gyms, and auto shops. Any city, any industry.
             </p>
             <ul class="demo-features">
               <li>Pulls and monitors Google Maps reviews automatically</li>
-              <li>AI identifies specific indicators: "long wait time," "rude staff," "always fresh"</li>
+              <li>Picks out specific phrases: "long wait time," "rude staff," "always fresh"</li>
               <li>Groups feedback into categories: Service, Staff, Quality, Value, and more</li>
               <li>See how you compare to competitors in your category</li>
-              <li>New reviews analyzed twice daily, dashboard always current</li>
+              <li>New reviews read twice daily, dashboard always current</li>
             </ul>
             <div class="product-actions">
-              <a href="https://fortwayne.hallmandata.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">View Live Demo &#x2197;</a>
+              <a href="https://fortwayne.hallmandata.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Open Live Demo</a>
               <a href="index.html#contact" class="btn btn-secondary">Get a Quote</a>
             </div>
+            <p class="product-access product-access-signin">Open to anyone — sign in with any Google account and you're straight in. Nothing to request, no approval to wait for.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================
+         PRODUCT 3 — VANTAGE RETAIL ANALYTICS
+    ========================= -->
+    <section class="product-section" id="vantage">
+      <div class="container">
+        <div class="product-card">
+          <div class="product-visual-col">
+            <div class="shot-tabs" data-shot-tabs>
+              <div class="shot-tablist" role="tablist" aria-label="Vantage retail analytics screens">
+                <button type="button" role="tab" id="vg-t1" aria-controls="vg-p1" aria-selected="true">Dashboard</button>
+                <button type="button" role="tab" id="vg-t2" aria-controls="vg-p2" aria-selected="false" tabindex="-1">Order Manager</button>
+                <button type="button" role="tab" id="vg-t3" aria-controls="vg-p3" aria-selected="false" tabindex="-1">Customers</button>
+                <button type="button" role="tab" id="vg-t4" aria-controls="vg-p4" aria-selected="false" tabindex="-1">Geography</button>
+              </div>
+              <div class="shot-panel" role="tabpanel" id="vg-p1" aria-labelledby="vg-t1">
+                <img src="assets/screens/vantage-dashboard.png" width="1440" height="900" alt="Vantage dashboard: total revenue, completed orders, average order value, cancellation rate, monthly revenue chart, and top products" />
+              </div>
+              <div class="shot-panel" role="tabpanel" id="vg-p2" aria-labelledby="vg-t2" hidden>
+                <img src="assets/screens/vantage-orders.png" width="1440" height="900" loading="lazy" alt="Vantage order manager: a searchable table of invoices with create, edit, and delete controls" />
+              </div>
+              <div class="shot-panel" role="tabpanel" id="vg-p3" aria-labelledby="vg-t3" hidden>
+                <img src="assets/screens/vantage-customers.png" width="1440" height="900" loading="lazy" alt="Vantage customer analytics: top customers by spend and repeat versus one-time buyers" />
+              </div>
+              <div class="shot-panel" role="tabpanel" id="vg-p4" aria-labelledby="vg-t4" hidden>
+                <img src="assets/screens/vantage-geography.png" width="1440" height="900" loading="lazy" alt="Vantage geographic analytics: revenue broken down by country" />
+              </div>
+            </div>
+          </div>
+          <div class="product-details">
+            <p class="product-tag">Live Product &middot; Open to anyone</p>
+            <h2>Vantage — Retail Analytics</h2>
+            <p>
+              Most dashboards only let you look. Vantage lets you look and change. Browse your revenue, products, customers, and countries — then add an order, correct one, or delete one, and watch every chart update on the spot.
+            </p>
+            <p>
+              The demo runs on Maple Street Gifts, a fictitious UK gift retailer with two years of real order history. No sign-in, nothing to install. Break it however you like — the data resets from a clean copy every night.
+            </p>
+            <ul class="demo-features">
+              <li>Revenue, product, customer, and country views in one place</li>
+              <li>Add, edit, and delete orders directly, with every entry checked before it saves</li>
+              <li>Every change shows up in the numbers immediately</li>
+              <li>Filter any view to the date range you care about</li>
+              <li>Click any product or customer to see their full history</li>
+            </ul>
+            <div class="product-actions">
+              <a href="https://vantage.hallmandata.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Try It Now</a>
+              <a href="index.html#contact" class="btn btn-secondary">Get a Quote</a>
+            </div>
+            <p class="product-access product-access-open">Open to anyone — no sign-in, no email required.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================
+         PRODUCT 4 — BUSINESS DECISION SIMULATOR
+    ========================= -->
+    <section class="product-section product-section-alt" id="simulator">
+      <div class="container">
+        <div class="product-card product-card-reverse">
+          <div class="product-visual-col">
+            <div class="shot-tabs" data-shot-tabs>
+              <div class="shot-tablist" role="tablist" aria-label="Business decision simulator screens">
+                <button type="button" role="tab" id="bs-t1" aria-controls="bs-p1" aria-selected="true">All Simulators</button>
+                <button type="button" role="tab" id="bs-t2" aria-controls="bs-p2" aria-selected="false" tabindex="-1">Pricing</button>
+                <button type="button" role="tab" id="bs-t3" aria-controls="bs-p3" aria-selected="false" tabindex="-1">Financing</button>
+              </div>
+              <div class="shot-panel" role="tabpanel" id="bs-p1" aria-labelledby="bs-t1">
+                <img src="assets/screens/simulator-home.png" width="1440" height="900" alt="Business Decision Simulator home page listing seven simulators" />
+              </div>
+              <div class="shot-panel" role="tabpanel" id="bs-p2" aria-labelledby="bs-t2" hidden>
+                <img src="assets/screens/simulator-pricing.png" width="1440" height="900" loading="lazy" alt="Pricing sensitivity simulator showing the profit-maximising price and a revenue versus price curve" />
+              </div>
+              <div class="shot-panel" role="tabpanel" id="bs-p3" aria-labelledby="bs-t3" hidden>
+                <img src="assets/screens/simulator-loan.png" width="1440" height="900" loading="lazy" alt="Loan and financing simulator showing monthly payment, total interest, and cash flow impact" />
+              </div>
+            </div>
+          </div>
+          <div class="product-details">
+            <p class="product-tag">Free Tool &middot; Open to anyone</p>
+            <h2>Business Decision Simulator</h2>
+            <p>
+              Run the numbers before you commit. Seven calculators that let you model a real decision with your own figures — should I raise my prices, open a second location, hire another person, run that discount, take that loan?
+            </p>
+            <p>
+              No sign-up, no spreadsheet, no cost. Type in what you know, move the sliders, and see what actually happens to your profit.
+            </p>
+            <ul class="demo-features">
+              <li>Product profitability and break-even timing</li>
+              <li>Expansion and new location planning</li>
+              <li>Membership growth and staffing cost</li>
+              <li>Discount, promotion, and pricing decisions</li>
+              <li>Loan and financing — what borrowing really costs you</li>
+            </ul>
+            <div class="product-actions">
+              <a href="https://simulate.hallmandata.com" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Try It Now</a>
+              <a href="index.html#contact" class="btn btn-secondary">Get a Quote</a>
+            </div>
+            <p class="product-access product-access-open">Open to anyone — no sign-in, no email required.</p>
           </div>
         </div>
       </div>

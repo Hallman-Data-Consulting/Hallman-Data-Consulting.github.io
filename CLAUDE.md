@@ -1,12 +1,12 @@
 # CLAUDE.md — company-website
 
-This is the source repo for the **Hallman Data Consulting marketing website** at `hallmandata.com`. It is one of five repos in the Hallman Data Consulting infrastructure — see `~/.claude/CLAUDE.md` for the full picture.
+This is the source repo for the **Hallman Data Consulting marketing website** at `hallmandata.com`. It is one of eight repos in the Hallman Data Consulting infrastructure — see `~/.claude/CLAUDE.md` for the full picture.
 
 ---
 
 ## What this repo is
 
-A static marketing website targeting non-technical small business owners. Its job is lead generation and credibility — not a portfolio or resume. The entire site is three files: `index.html`, `styles.css`, `main.js`. No build step, no framework, no dependencies.
+A static marketing website targeting non-technical small business owners. Its job is lead generation and credibility — not a portfolio or resume. The entire site is four files: `index.html`, `products.html`, `styles.css`, `main.js`, plus screenshots in `assets/`. No build step, no framework, no dependencies.
 
 ---
 
@@ -14,9 +14,12 @@ A static marketing website targeting non-technical small business owners. Its jo
 
 | File | Purpose |
 |---|---|
-| `index.html` | The full site (261 lines). One page, seven sections: Nav, Hero, Pain Points, What We Do, How It Works, Demo, About, Contact, Footer. |
-| `styles.css` | All styling (731 lines). Mobile-first, breakpoints at 900px and 640px. Uses CSS custom properties for bar heights in the hero chart. |
-| `main.js` | Mobile nav toggle only (18 lines). Toggles `.open` on `.nav-links` and sets `aria-expanded`. |
+| `index.html` | Home page. Nav, Hero, Pain Points, Core Products (2x2 grid of all four products), What We Do, About, Contact, Footer. |
+| `products.html` | Products page. One detailed section per product, each with a tabbed screenshot gallery. |
+| `styles.css` | All styling. Mobile-first, breakpoints at 900px and 640px. Uses CSS custom properties for bar heights in the hero chart. |
+| `main.js` | Mobile nav toggle, plus the screenshot tab galleries (`[data-shot-tabs]`). Panels are hidden with the `hidden` attribute, so every screenshot is still in the markup if the script never runs. |
+| `assets/screens/` | Product screenshots, captured at 1440x900. Regenerate them whenever a dashboard's look changes — a stale screenshot is worse than none. |
+| `assets/hdc-mark.png` | The HDC logo mark. Favicon here, and the browser-tab icon in all four Streamlit apps. |
 | `CONTEXT.md` | Business goals, target audience, tone guidelines, Ironforge demo details. Read this before changing copy. |
 | `CNAME` | Contains `hallmandata.com` — tells GitHub Pages to serve the site at the custom domain. |
 
@@ -45,15 +48,18 @@ monitor.hallmandata.com (tracks all traffic including this site)
 
 ## Design system
 
-**Color palette:**
-- Navy (primary): `#1e3560`
-- Blue (accent / CTA): `#2b7de9`
-- Light background: `#f0f4fb`
-- Gray (secondary text): `#64748b`
-- Text: `#1a1a2e`
-- Footer background: `#0f1d3a`
+See `BRAND.md` for the authoritative version.
 
-**Typography:** Inter (Google Fonts), weights 400/500/600/700.
+**Color palette:**
+- Navy (primary): `#1b2a4a`
+- Gold (accent): `#c4972a`
+- Cream (light background): `#f9f7f3`
+- Charcoal (body text): `#1a1a18`
+- Slate (secondary text): `#6b6a65`
+
+**Typography:** Cormorant Garamond for headings, DM Sans for body (both Google Fonts).
+
+**No emoji anywhere**, on the site or in the dashboards. Bullets and markers are drawn in CSS rather than typed as glyphs, because a glyph renders as a colour emoji on some platforms.
 
 **Layout:** `.container` = `max-width: 1100px`, `padding: 0 24px`. Section padding is `96px 0` on desktop, `64px 0` on mobile.
 
@@ -71,8 +77,8 @@ The audience is non-technical small business owners. Strict rules from `CONTEXT.
 
 ## Pending work in the site
 
-- **Demo screenshot placeholder** (`index.html:172`): The `.demo-preview` div currently shows "Screenshot coming soon". Replace with `<img src="assets/ironforge-screenshot.png" alt="Ironforge Fitness dashboard screenshot" />` once the screenshot is captured.
-- The live Ironforge dashboard is linked as `http://18.214.89.223:8501` (direct IP). This should be updated to `https://ironforge.hallmandata.com` once that subdomain is confirmed stable.
+- **Fort Wayne screenshot**: the sentiment product is the only one still using a drawn CSS graphic instead of a real screenshot, because its database lives on EC2 and the dashboard is behind Google OAuth, so it cannot be captured locally. Take one from the live site and drop it in as `assets/screens/fortwayne-*.png`, then give it a `[data-shot-tabs]` gallery like the other three.
+- **Two demos ask for a Google sign-in.** Ironforge and Fort Wayne sit behind oauth2-proxy, but any Google account gets in — there is no allowlist on those two (only `monitor.hallmandata.com` is restricted). Their `.product-access` notes say so explicitly, because "sign-in required" reads as "you cannot see this" and costs clicks.
 
 ---
 

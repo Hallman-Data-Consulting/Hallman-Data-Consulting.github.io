@@ -28,7 +28,7 @@ Small business owners who have operational data (sales, customers, bookings, pay
 
 ## Site Goals
 1. Explain what we do in plain language
-2. Show a concrete example of what a deliverable looks like (Ironforge Fitness demo)
+2. Show a concrete example of what a deliverable looks like (Ironforge Fitness demo, plus Vantage and the Business Decision Simulator, which anyone can open without signing in)
 3. Communicate the retainer model so prospects understand what they're buying
 4. Provide one clear call to action (book a call or send an email)
 5. Establish trust and legitimacy
@@ -38,7 +38,7 @@ Small business owners who have operational data (sales, customers, bookings, pay
 ## Demo Project — Ironforge Fitness
 A synthetic gym client built as a portfolio demo. Shows the full end-to-end product a client would receive.
 
-- **Live dashboard:** http://18.214.89.223:8501
+- **Live dashboard:** https://ironforge.hallmandata.com (Google sign-in required)
 - **GitHub repo:** https://github.com/Hallman-Data-Consulting/ironforge-fitness-example
 - **What it shows:** Member segmentation, churn risk identification, revenue trends, class analytics, and individual member lookup
 - **Framing for the site:** "Here's what your deliverable could look like" — position it as a real example, not a toy
